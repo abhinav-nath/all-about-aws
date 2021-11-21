@@ -5,7 +5,7 @@ plugins {
 }
 
 group = 'com.codecafe.aws.opensearch'
-version = '0.0.1-SNAPSHOT'
+version = '1.0.0'
 sourceCompatibility = '11'
 
 configurations {
@@ -19,7 +19,10 @@ repositories {
 }
 
 dependencies {
+	implementation 'org.opensearch.client:opensearch-rest-client:1.1.0'
+	implementation 'org.opensearch.client:opensearch-java:0.1.0'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'jakarta.json:jakarta.json-api:2.0.1'
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
