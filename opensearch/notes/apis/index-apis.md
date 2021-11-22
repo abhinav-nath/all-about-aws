@@ -4,7 +4,6 @@
 
 ```json
 PUT /product-catalog-index
-
 {
   "settings": {
     "index": {
@@ -14,15 +13,33 @@ PUT /product-catalog-index
   },
   "mappings": {
     "properties": {
-      "name": { "type": "text" },
-      "category": { "type": "text"},
-      "brand": { "type": "text"},
-      "description": { "type": "text"},
-      "color": { "type": "text"},
-      "price": { "type": "double"},
-      "date_added": { "type": "date"},
-      "date_modified": { "type": "date"},
-      "in_stock": { "type": "boolean"}
+      "name": {
+        "type": "text"
+      },
+      "categories": {
+        "type": "text"
+      },
+      "brand": {
+        "type": "text"
+      },
+      "description": {
+        "type": "text"
+      },
+      "color": {
+        "type": "text"
+      },
+      "price": {
+        "type": "double"
+      },
+      "date_added": {
+        "type": "date"
+      },
+      "date_modified": {
+        "type": "date"
+      },
+      "in_stock": {
+        "type": "boolean"
+      }
     }
   },
   "aliases": {
@@ -56,23 +73,4 @@ Once an index is closed, you cannot add data to it or search for any data within
 
 ```json
 POST /product-catalog-index/_close
-```
-
-## Search Index
-
-OS Search [documentation](https://opensearch.org/docs/latest/opensearch/ux/ "OpenSearch Search Experience")
-
-`from` and `size` are for [pagination](https://opensearch.org/docs/latest/opensearch/ux/#paginate-results "Paginate Results")
-
-```json
-GET product-catalog-index/_search
-{
-  "from": 0,
-  "size": 10,
-  "query": {
-    "match": {
-      "category": "LAPTOPS"
-    }
-  }
-}
 ```

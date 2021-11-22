@@ -6,7 +6,7 @@
 PUT product-catalog-index/_doc/1
 {
     "name": "Macbook Pro 2019",
-    "category": "LAPTOPS",
+    "categories": "LAPTOPS",
     "brand": "Apple",
     "description": "Apple Macbook Pro 2019 model",
     "color": "SILVER",
@@ -105,3 +105,5 @@ POST product-catalog-index/_bulk
 {"create":{"_id":"1"}}
 {"name":"ROG Zephyrus","category":"LAPTOPS","brand":"Asus","description":"Asus ROG Zephyrus Ryzen 9","color":"BLACK","price":1500,"date_added":"2021-09-22","in_stock":true}
 ```
+
+curl -XPOST "https://opensearch-node1:9200/product-catalog-index/_bulk" -H 'Content-Type: application/json' -d'{"create":{"_id":"1"}}{"name":"ROG Zephyrus","category":"LAPTOPS","brand":"Asus","description":"Asus ROG Zephyrus Ryzen 9","color":"BLACK","price":1500,"date_added":"2021-09-22","in_stock":true}{"create":{"_id":"2"}}{"name":"ROG Zephyrus","category":"LAPTOPS","brand":"Asus","description":"Asus ROG Zephyrus Ryzen 9","color":"BLACK","price":1500,"date_added":"2021-09-22","in_stock":true}'
