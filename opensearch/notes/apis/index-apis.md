@@ -57,3 +57,22 @@ Once an index is closed, you cannot add data to it or search for any data within
 ```json
 POST /product-catalog-index/_close
 ```
+
+## Search Index
+
+OS Search [documentation](https://opensearch.org/docs/latest/opensearch/ux/ "OpenSearch Search Experience")
+
+`from` and `size` are for [pagination](https://opensearch.org/docs/latest/opensearch/ux/#paginate-results "Paginate Results")
+
+```json
+GET product-catalog-index/_search
+{
+  "from": 0,
+  "size": 10,
+  "query": {
+    "match": {
+      "category": "LAPTOPS"
+    }
+  }
+}
+```
