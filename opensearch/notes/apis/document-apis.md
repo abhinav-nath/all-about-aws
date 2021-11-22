@@ -5,14 +5,20 @@
 ```json
 PUT product-catalog-index/_doc/1
 {
-    "name": "Macbook Pro 2019",
-    "categories": "LAPTOPS",
-    "brand": "Apple",
-    "description": "Apple Macbook Pro 2019 model",
-    "color": "SILVER",
-    "price": 2200,
-    "date_added": "2019-04-18",
-    "in_stock": false
+  "name": "Macbook Pro 2021",
+  "category": {
+    "super_category": "Electronics",
+    "sub_categories": [
+      "Laptops",
+      "Productivity Laptops"
+    ]
+  },
+  "brand": "Apple",
+  "description": "Apple Macbook Pro 2021 model with M1 Chip",
+  "color": "Grey",
+  "price": 1300,
+  "date_added": "2021-08-22",
+  "in_stock": true
 }
 ```
 
@@ -28,22 +34,28 @@ Response:
 
 ```json
 {
-  "_index" : "product-catalog-index",
-  "_type" : "_doc",
-  "_id" : "1",
-  "_version" : 1,
-  "_seq_no" : 0,
-  "_primary_term" : 1,
-  "found" : true,
-  "_source" : {
-    "name" : "Macbook Pro 2019",
-    "category" : "LAPTOPS",
-    "brand" : "Apple",
-    "description" : "Apple Macbook Pro 2019 model",
-    "color" : "SILVER",
-    "price" : 2200,
-    "date_added" : "2019-04-18",
-    "in_stock" : false
+  "_index": "product-catalog-index",
+  "_type": "_doc",
+  "_id": "1",
+  "_version": 1,
+  "_seq_no": 0,
+  "_primary_term": 1,
+  "found": true,
+  "_source": {
+    "name": "Macbook Pro 2019",
+    "category": {
+      "super_category": "Electronics",
+      "sub_categories": [
+        "Laptops",
+        "Productivity Laptops"
+      ]
+    },
+    "brand": "Apple",
+    "description": "Apple Macbook Pro 2019 model",
+    "color": "Silver",
+    "price": 2200,
+    "date_added": "2019-04-18",
+    "in_stock": false
   }
 }
 ```
@@ -54,14 +66,20 @@ Response:
 POST product-catalog-index/_update/1
 {
   "doc": {
-    "name": "Macbook Pro 2021",
-    "category": "LAPTOPS",
+    "name": "Macbook Pro 2019",
+    "category": {
+      "super_category": "Electronics",
+      "sub_categories": [
+        "Laptops",
+        "Productivity Laptops"
+      ]
+    },
     "brand": "Apple",
-    "description": "Apple Macbook Pro 2021 model with M1 Chip",
-    "color": "GREY",
-    "price": 1300,
-    "date_added": "2021-08-22",
-    "in_stock": true
+    "description": "Apple Macbook Pro 2019 model",
+    "color": "Silver",
+    "price": 2200,
+    "date_added": "2019-04-18",
+    "in_stock": false
   }
 }
 ```
@@ -103,7 +121,5 @@ Example:
 POST product-catalog-index/_bulk
 {"delete":{"_id":"1"}}
 {"create":{"_id":"1"}}
-{"name":"ROG Zephyrus","category":"LAPTOPS","brand":"Asus","description":"Asus ROG Zephyrus Ryzen 9","color":"BLACK","price":1500,"date_added":"2021-09-22","in_stock":true}
+{"name":"Macbook Pro 2019","category":{"super_category":"Electronics","sub_categories":["Laptops","Productivity Laptops"]},"brand":"Apple","description":"Apple Macbook Pro 2019 model","color":"Silver","price":2200,"date_added":"2019-04-18","in_stock":false}
 ```
-
-curl -XPOST "https://opensearch-node1:9200/product-catalog-index/_bulk" -H 'Content-Type: application/json' -d'{"create":{"_id":"1"}}{"name":"ROG Zephyrus","category":"LAPTOPS","brand":"Asus","description":"Asus ROG Zephyrus Ryzen 9","color":"BLACK","price":1500,"date_added":"2021-09-22","in_stock":true}{"create":{"_id":"2"}}{"name":"ROG Zephyrus","category":"LAPTOPS","brand":"Asus","description":"Asus ROG Zephyrus Ryzen 9","color":"BLACK","price":1500,"date_added":"2021-09-22","in_stock":true}'

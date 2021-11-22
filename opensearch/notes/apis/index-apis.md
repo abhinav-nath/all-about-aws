@@ -16,11 +16,19 @@ PUT /product-catalog-index
       "name": {
         "type": "text"
       },
-      "categories": {
-        "type": "text"
+      "category": {
+        "type": "nested",
+        "properties": {
+          "super_category": {
+            "type": "keyword"
+          },
+          "sub_categories": {
+            "type": "keyword"
+          }
+        }
       },
       "brand": {
-        "type": "text"
+        "type": "keyword"
       },
       "description": {
         "type": "text"

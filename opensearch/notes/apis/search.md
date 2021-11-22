@@ -11,7 +11,7 @@ GET product-catalog-index/_search
   "size": 10,
   "query": {
     "match": {
-      "category": "LAPTOPS"
+      "category": "Laptops"
     }
   }
 }
@@ -30,10 +30,21 @@ GET product-catalog-index/_search
     }
   },
   "aggs": {
-    "response_codes": {
-      "terms": {
-        "field": "category.keyword",
-        "size": 10
+    "facets": {
+      "nested": {
+        "path": "category"
+      },
+      "aggs": {
+        "super_category": {
+          "terms": {
+            "field": "category.super_category"
+          }
+        },
+        "sub_categories": {
+          "terms": {
+            "field": "category.sub_categories"
+          }
+        }
       }
     }
   }
