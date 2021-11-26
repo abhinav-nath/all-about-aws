@@ -14,6 +14,7 @@ import org.opensearch.client.base.Transport;
 import org.opensearch.client.json.jackson.JacksonJsonpMapper;
 import org.opensearch.client.opensearch.OpenSearchClient;
 import org.opensearch.client.opensearch._global.IndexRequest;
+import org.opensearch.client.opensearch._global.SearchRequest;
 import org.opensearch.client.opensearch._global.SearchResponse;
 import org.opensearch.client.opensearch.indices.*;
 import org.opensearch.client.opensearch.indices.put_settings.IndexSettingsBody;
@@ -29,6 +30,9 @@ public class OpenSearchClientExample {
     static class IndexData {
         private String firstName;
         private String lastName;
+
+        public IndexData() {
+        }
 
         public IndexData(String firstName, String lastName) {
             this.firstName = firstName;
@@ -71,7 +75,6 @@ public class OpenSearchClientExample {
             }
     };
 
-
     public static void main(String[] args) {
         try {
 
@@ -106,27 +109,46 @@ public class OpenSearchClientExample {
             PutSettingsRequest putSettingsRequest = new PutSettingsRequest.Builder().index(index).value(settingsBody).build();
             client.indices().putSettings(putSettingsRequest);
 
-            // Index some data
-            IndexData indexData = new IndexData("first_name", "Bruce");
+            // Index one document
+            IndexData indexData = new IndexData("Bruce", "Wayne");
             IndexRequest<IndexData> indexRequest = new IndexRequest.Builder<IndexData>().index(index).id("1").value(indexData).build();
             client.index(indexRequest);
 
+            // Index another document
+            IndexData anotherIndexData = new IndexData("Bruce", "Banner");
+            IndexRequest<IndexData> anotherIndexRequest = new IndexRequest.Builder<IndexData>().index(index).id("2").value(anotherIndexData).build();
+            client.index(anotherIndexRequest);
+
+            Thread.sleep(1000);
+
             // Search for the document
-            SearchResponse<IndexData> searchResponse = client.search(s -> s.index(index), IndexData.class);
+            SearchRequest searchRequest = new SearchRequest.Builder()
+                    .index(index)
+                    .query(
+                            q -> q.multiMatch(
+                                    m -> m.query("Bruce")
+                                            .fields("firstName")
+                            )
+                    )
+                    .build();
+            SearchResponse<IndexData> searchResponse = client.search(searchRequest, IndexData.class);
+
             for (int i = 0; i < searchResponse.hits().hits().size(); i++) {
-                System.out.println(searchResponse.hits().hits().get(i).source());
+                System.out.println("SEARCH RESULT - " + searchResponse.hits().hits().get(i).source());
             }
 
-            // Delete the document
+            // Delete the documents
             client.delete(b -> b.index(index).id("1"));
+            client.delete(b -> b.index(index).id("2"));
 
             // Delete the index
             DeleteRequest deleteRequest = new DeleteRequest.Builder().index(index).build();
             DeleteResponse deleteResponse = client.indices().delete(deleteRequest);
 
             restClient.close();
-        } catch (IOException e) {
+        } catch (IOException | InterruptedException e) {
             System.out.println(e.toString());
         }
     }
+
 }
