@@ -41,3 +41,16 @@ AZs make partitioning applications for high availability easy.
 If an application is partitioned across AZs, companies are better isolated and protected from issues such as power outages, lightning strikes, tornadoes, earthquakes, and more.
 
 AZs are physically separated by a meaningful distance, many kilometers, from any other AZ, although all are within 100 km (60 miles) of each other.
+
+AWS has Global Services like these:
+- IAM
+- Route 53 (DNS service)
+- Cloudfront (Content Delivery Network)
+
+Region-scoped services:
+- Amazon EC2 (IaaS)
+- Elastic Beanstalk (PaaS)
+- Lambda (Function as a Service)
+- Rekognition (SaaS)
+
+Here are all the [Regional Services]("https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/?p=ngi&loc=4" AWS Regional Services)
