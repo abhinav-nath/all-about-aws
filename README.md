@@ -53,4 +53,4 @@ Region-scoped services:
 - Lambda (Function as a Service)
 - Rekognition (SaaS)
 
-Here are all the [Regional Services]("https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/?p=ngi&loc=4" AWS Regional Services)
+Here is a list of all the [Regional Services](https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/?p=ngi&loc=4 "AWS Regional Services")
