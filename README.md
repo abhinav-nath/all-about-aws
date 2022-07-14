@@ -26,7 +26,7 @@ Example:
 - ap-southeast-2b
 - ap-southeast-2c
 
-<img width="257" alt="image" src="https://user-images.githubusercontent.com/48696735/179051415-44e8f879-345a-4287-9152-a66506d967dc.png"
+<img width="257" alt="image" src="https://user-images.githubusercontent.com/48696735/179051415-44e8f879-345a-4287-9152-a66506d967dc.png">
 
 Each AZ has independent power, cooling, and physical security and is connected via redundant, ultra-low-latency networks.
 
