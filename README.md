@@ -1,3 +1,7 @@
+- [Regions and Availability Zones](#regions-and-availability-zones "Regions and Availability Zones")
+  - [How to choose an AWS region?](#how-to-choose-an-aws-region "How to choose an AWS region?")
+  - [Availability Zones (AZs)](#availability-zones-azs "Availability Zones (AZs)")
+
 ## Regions and Availability Zones
 
 Regions are all around the world (ex: us-east-1, eu-west-2 ...)
