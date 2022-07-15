@@ -1,3 +1,5 @@
+## Table of contents
+
 - [Regions and Availability Zones](#regions-and-availability-zones "Regions and Availability Zones")
   - [How to choose an AWS region?](#how-to-choose-an-aws-region "How to choose an AWS region?")
   - [Availability Zones (AZs)](#availability-zones-azs "Availability Zones (AZs)")
@@ -58,3 +60,6 @@ Region-scoped services:
 - Rekognition (SaaS)
 
 Here is a list of all the [Regional Services](https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/?p=ngi&loc=4 "AWS Regional Services")
+
+
+[Go to top ⬆️](#table-of-contents)
