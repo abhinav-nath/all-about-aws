@@ -61,5 +61,9 @@ Region-scoped services:
 
 Here is a list of all the [Regional Services](https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/?p=ngi&loc=4 "AWS Regional Services")
 
+## Route 53
+
+Route 53 connects user requests to internet applications running on AWS or on-premises.
+The name is a possible reference to U.S. Routes, and "53" is a reference to the TCP/UDP port 53, where DNS server requests are addressed.
 
 [Go to top ⬆️](#table-of-contents)
