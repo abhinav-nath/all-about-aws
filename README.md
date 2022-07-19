@@ -4,6 +4,13 @@
   - [How to choose an AWS region?](#how-to-choose-an-aws-region "How to choose an AWS region?")
   - [Availability Zones (AZs)](#availability-zones-azs "Availability Zones (AZs)")
 
+## AWS Budget Setup for Free Tier - Important!!
+
+It is a good idea to create a budget to keep track of any charges while using AWS.
+Go to `Billing -> Budgets -> Create Budget` and create a cost budget.
+Also setup alerts on reaching threshold costs and specify multiple email ids so that you get prompt notification before it is too late!
+
+
 ## Regions and Availability Zones
 
 Regions are all around the world (ex: us-east-1, eu-west-2 ...)
@@ -60,6 +67,7 @@ Region-scoped services:
 - Rekognition (SaaS)
 
 Here is a list of all the [Regional Services](https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/?p=ngi&loc=4 "AWS Regional Services")
+
 
 ## Route 53
 
