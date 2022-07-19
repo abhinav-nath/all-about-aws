@@ -7,7 +7,9 @@
 ## AWS Budget Setup for Free Tier - Important!!
 
 It is a good idea to create a budget to keep track of any charges while using AWS.
+
 Go to `Billing -> Budgets -> Create Budget` and create a cost budget.
+
 Also setup alerts on reaching threshold costs and specify multiple email ids so that you get prompt notification before it is too late!
 
 
