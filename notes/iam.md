@@ -12,11 +12,11 @@ With IAM, you can specify who can access which services and resources, and under
 - **Groups** only contain users, not other groups
 - Users don't have to belong to a group, and one user can belong to multiple groups
 
-<img width="60%" alt="image" src="https://user-images.githubusercontent.com/48696735/179809318-803ae010-74ea-4057-9481-f619114769db.png">
+<img width="40%" alt="image" src="https://user-images.githubusercontent.com/48696735/179809318-803ae010-74ea-4057-9481-f619114769db.png">
 
 ## IAM : Permissions
 
 - Users or Groups can be assigned **policies** (as JSON documents)
-  <img width="80%" alt="image" src="https://user-images.githubusercontent.com/48696735/179822821-274e1d87-0b06-4d37-9434-393172fdeebb.png">
+  <img width="60%" alt="image" src="https://user-images.githubusercontent.com/48696735/179822821-274e1d87-0b06-4d37-9434-393172fdeebb.png">
 - These policies define the **permissions** of the users/groups
 - In AWS, you apply the **least privilege principle**: don't give more permission than a user needs
