@@ -3,6 +3,7 @@
 - [Regions and Availability Zones](#regions-and-availability-zones "Regions and Availability Zones")
   - [How to choose an AWS region?](#how-to-choose-an-aws-region "How to choose an AWS region?")
   - [Availability Zones (AZs)](#availability-zones-azs "Availability Zones (AZs)")
+- [IAM](./notes/iam.md "Identity and Access Management")
 
 ## AWS Budget Setup for Free Tier - Important!!
 
