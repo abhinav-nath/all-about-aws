@@ -41,3 +41,11 @@ There are many instance types, below are just few examples:
 <img width="60%" alt="image" src="https://user-images.githubusercontent.com/48696735/180078336-2377c40f-d3cb-49b8-bf75-5c3cbd9d6e7c.png">
 
 **t2.micro is part of the AWS free tier** (up to 750 hours per month)
+
+### Naming convention
+
+`m5.2xlarge`
+
+- **m**: instance class
+- **5**: generation (AWS improves them over time)
+- **2xlarge**: size within the instance class
