@@ -23,7 +23,7 @@ With IAM, you can specify who can access which services and resources, and under
 
 - Users or Groups can be assigned **policies** (as JSON documents)
 
-  <img width="50%" alt="image" src="https://user-images.githubusercontent.com/48696735/179822821-274e1d87-0b06-4d37-9434-393172fdeebb.png">
+  <img width="40%" alt="image" src="https://user-images.githubusercontent.com/48696735/179822821-274e1d87-0b06-4d37-9434-393172fdeebb.png">
 
 - These policies define the **permissions** of the users/groups
 - In AWS, you apply the **least privilege principle**: don't give more permission than a user needs
@@ -55,16 +55,8 @@ With IAM, you can specify who can access which services and resources, and under
 ## IAM : Password Policy
 
 - Strong passwords = higher security for your account
-- In AWS, you can setup a password policy:
-  - Set a minimum password length
-  - Require specific character types:
-    - including uppercase letters
-    - lowercase letters
-    - numbers
-    - non-alphanumeric characters
-  - Allow all IAM users to change their own passwords
-  - Require users to change their password after some time (password expiration)
-  - Prevent password re-use
+- In AWS, you can setup a password policy by going to `IAM -> Account Settings -> Create Password Policy`:
+  <img width="80%" alt="image" src="https://user-images.githubusercontent.com/48696735/180049001-0372816f-9090-4755-b9da-8c480117858f.png">
 - A password policy is really helpful against brute-force attacks on your account
 - But, there is a second defense mechanism - **MFA**
 
