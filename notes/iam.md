@@ -1,4 +1,4 @@
-# Identity and Access Management (IAM)
+# Identity and Access Management (IAM) <img align="right" width="8%" alt="image" src="https://user-images.githubusercontent.com/48696735/180072070-e655c251-c23a-4d8b-ad3b-0910223ba25a.png">
 
 - [IAM : Permissions](#iam--permissions "IAM : Permissions")
 - [IAM Policies Structure](#iam-policies-structure "IAM Policies Structure")
