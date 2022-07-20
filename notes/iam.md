@@ -6,6 +6,7 @@
 - [Multi Factor Authentication - MFA](#multi-factor-authentication---mfa "Multi Factor Authentication - MFA")
 - [How can users access AWS?](#how-can-users-access-aws "How can users access AWS?")
 - [Create an Access Key and configure it in AWS CLI](#create-an-access-key-and-configure-it-in-aws-cli "Create an Access Key and configure it in AWS CLI")
+- [IAM Roles](#iam-roles "IAM Roles")
 
 IAM provides fine-grained access control across all of AWS.
 With IAM, you can specify who can access which services and resources, and under which conditions.
@@ -115,3 +116,13 @@ With IAM, you can specify who can access which services and resources, and under
     ]
   }
   ```
+
+## IAM Roles
+
+- An IAM role is an identity you can create that has specific permissions with credentials that are valid for short durations
+- Roles can be assumed by entities that you trust
+- Roles have:
+  1. Trusted entity (like AWS Service, AWS account etc)
+  2. Permissions
+- Use case:
+  - Create a role for EC2 to have a `IAMReadOnlyAccess` permission
