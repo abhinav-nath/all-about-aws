@@ -71,3 +71,13 @@ With IAM, you can specify who can access which services and resources, and under
 ## Multi Factor Authentication - MFA
 
 - Users have access to your account and can possibly change configurations or delete resources in your AWS account
+- You want to protect your Root account and IAM users
+- You can do it via **MFA**
+- `MFA = password you know + security device you own`
+- Main benefit of MFA:
+  - Even if a password is stolen or hacked, the account is not compromised
+
+### MFA device options in AWS
+
+<img width="80%" alt="image" src="https://user-images.githubusercontent.com/48696735/180038934-3ec3f46d-66e7-4de2-ae4c-56434aad731e.png">
+<img width="80%" alt="image" src="https://user-images.githubusercontent.com/48696735/180039003-9df65b80-ec78-4dfc-b4ae-b50ee7b2ddd2.png">
