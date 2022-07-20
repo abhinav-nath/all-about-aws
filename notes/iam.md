@@ -86,3 +86,30 @@ With IAM, you can specify who can access which services and resources, and under
 - Access Keys are secret, just like a password. Don't share them!
 - **Access Key ID ~= username**
 - **Secret Access Key ~= password**
+
+## Create an Access Key and configure it in AWS CLI
+
+- Go to `IAM -> Users -> Summary -> Security Credentials -> Create Access Key`
+- ```shell
+  ~ aws configure
+  AWS Access Key ID [None]: HFE8R3R0FFKJHWEFFW3G
+  AWS Secret Access Key [None]: afKIJH23e2njnfweFDSjfs7392fafefSDV
+  Default region name [None]: ap-south-1
+  Default output format [None]:
+  ```
+- Check the user
+  ```shell
+  ~ aws iam list-users
+  {
+    "Users": [
+        {
+            "Path": "/",
+            "UserName": "someuser",
+            "UserId": "HFE8R3R0FFKJHWEFFW3G",
+            "Arn": "arn:aws:iam::423433242:user/someuser",
+            "CreateDate": "2022-07-19T19:19:45+00:00",
+            "PasswordLastUsed": "2022-07-20T16:31:55+00:00"
+        }
+    ]
+  }
+  ```
