@@ -26,7 +26,7 @@
 
 - It is possible to bootstrap our instances using an **EC2 User Data** script
 - **bootstrapping** means executing commands when a machine starts
-- This script is **run only once** when the instance starts
+- This script is **run only once** when the instance is launched for the first time
 - EC2 user data is used to automate boot tasks such as:
   - Installing updates
   - Installing software
