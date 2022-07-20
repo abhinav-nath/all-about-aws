@@ -1,5 +1,10 @@
 # Identity and Access Management (IAM)
 
+- [IAM : Permissions](#iam--permissions "IAM : Permissions")
+- [IAM Policies Structure](#iam-policies-structure "IAM Policies Structure")
+- [IAM : Password Policy](#iam--password-policy "IAM : Password Policy")
+- [Multi Factor Authentication - MFA](#multi-factor-authentication---mfa "Multi Factor Authentication - MFA")
+
 IAM provides fine-grained access control across all of AWS.
 With IAM, you can specify who can access which services and resources, and under which conditions.
 
@@ -46,3 +51,23 @@ With IAM, you can specify who can access which services and resources, and under
   - **Resource** : list of resources to which the actions will be applied to
   
   - **Condition** : condition for when this statement will be applied (optional)
+
+## IAM : Password Policy
+
+- Strong passwords = higher security for your account
+- In AWS, you can setup a password policy:
+  - Set a minimum password length
+  - Require specific character types:
+    - including uppercase letters
+    - lowercase letters
+    - numbers
+    - non-alphanumeric characters
+  - Allow all IAM users to change their own passwords
+  - Require users to change their password after some time (password expiration)
+  - Prevent password re-use
+- A password policy is really helpful against brute-force attacks on your account
+- But, there is a second defense mechanism - **MFA**
+
+## Multi Factor Authentication - MFA
+
+- Users have access to your account and can possibly change configurations or delete resources in your AWS account
