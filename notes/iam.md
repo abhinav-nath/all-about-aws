@@ -7,6 +7,7 @@
 - [How can users access AWS?](#how-can-users-access-aws "How can users access AWS?")
 - [Create an Access Key and configure it in AWS CLI](#create-an-access-key-and-configure-it-in-aws-cli "Create an Access Key and configure it in AWS CLI")
 - [IAM Roles](#iam-roles "IAM Roles")
+- [IAM Security Tools](#iam-security-tools "IAM Security Tools")
 
 IAM provides fine-grained access control across all of AWS.
 With IAM, you can specify who can access which services and resources, and under which conditions.
@@ -126,3 +127,14 @@ With IAM, you can specify who can access which services and resources, and under
   2. Permissions
 - Use case:
   - Create a role for EC2 to have a `IAMReadOnlyAccess` permission
+
+## IAM Security Tools
+
+- **IAM Credential Report (account-level)**
+  - A report that lists all your account's users and the status of their various credentials
+  - `IAM -> Credential report`
+ 
+- **IAM Access Advisor (user-level)**
+  - Access advisor shows the service permissions granted to a user and when those services were last accessed
+  - You can use this information to revise your policies
+  - `Users -> Summary -> Access Advisor`
