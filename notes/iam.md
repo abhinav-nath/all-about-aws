@@ -4,6 +4,7 @@
 - [IAM Policies Structure](#iam-policies-structure "IAM Policies Structure")
 - [IAM : Password Policy](#iam--password-policy "IAM : Password Policy")
 - [Multi Factor Authentication - MFA](#multi-factor-authentication---mfa "Multi Factor Authentication - MFA")
+- [How can users access AWS?](#how-can-users-access-aws "How can users access AWS?")
 
 IAM provides fine-grained access control across all of AWS.
 With IAM, you can specify who can access which services and resources, and under which conditions.
@@ -73,3 +74,15 @@ With IAM, you can specify who can access which services and resources, and under
 
 <img width="80%" alt="image" src="https://user-images.githubusercontent.com/48696735/180038934-3ec3f46d-66e7-4de2-ae4c-56434aad731e.png">
 <img width="80%" alt="image" src="https://user-images.githubusercontent.com/48696735/180039003-9df65b80-ec78-4dfc-b4ae-b50ee7b2ddd2.png">
+
+## How can users access AWS?
+
+- To access AWS, you have three options:
+  1. **AWS Management Console**: protected by password + MFA
+  2. **AWS Command Line Interface (CLI)**: protected by access keys
+  3. **AWS Software Developer Kit (SDK)**: (for code) protected by access keys
+- Access Keys are generated through the **AWS Console**
+- Users manage their own access keys
+- Access Keys are secret, just like a password. Don't share them!
+- **Access Key ID ~= username**
+- **Secret Access Key ~= password**
