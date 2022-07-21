@@ -186,6 +186,16 @@ These are the various strategies for a placement group:
   - Application that needs to maximize high availability
   - Critical applications where each instance must be isolated from failure
 
-- **Partition** - spreads instances across many different partitions (which rely on different sets of racks) within an AZ.
-  Scales to 100s of EC2 instances per group (Hadoop, Cassandra, Kafka)
-  ![image](https://user-images.githubusercontent.com/48696735/180267029-165d992e-f5b4-47e0-91e4-d59d119529a5.png)
+- **Partition**
+
+  <img width="50%" src="https://user-images.githubusercontent.com/48696735/180267029-165d992e-f5b4-47e0-91e4-d59d119529a5.png">
+
+  - Up to 7 partitions per AZ
+  - Can span across multiple AZs in the same region
+  - Up to 100s of EC2 instances
+  - The instances in a partition do not share racks with the instances in ther other partitions
+  - A partition failure can affect many EC2 but won't effect other partitions
+  - EC2 instances get access to the partition information as metadata
+  
+  **Use cases:**
+  - HDFS, HBase, Cassandra, Kafka
