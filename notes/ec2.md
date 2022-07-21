@@ -8,6 +8,7 @@
 - [Classic Ports](#classic-ports "Classic Ports")
 - [How to SSH into EC2 instance](#how-to-ssh-into-ec2-instance "How to SSH into EC2 instance")
 - [Private vs Public vs Elastic IP](#private-vs-public-vs-elastic-ip "Private vs Public vs Elastic IP")
+- [EC2 Placement Groups](#ec2-placement-groups "EC2 Placement Groups")
 
 ## Overview
 
@@ -148,3 +149,20 @@ IPv4 allows for **3.7 billion** different addresses in the public space
     - They often reflect poor architectural decisions
     - Instead, use a random public IP and register a **DNS** name to it
     - Or, use a **Load Balancer** and don't use a public IP
+
+## EC2 Placement Groups
+
+Sometimes you want control over the EC2 instance placement strategy, that strategy can be defined using **Placement Groups**.
+
+We don't get direct interaction with the hardware of AWS but we let AWS know how we want our EC2 instances to be placed compared to one another.
+
+These are the various strategies for a placement group:
+
+- **Cluster** - clusters instances into a low-latency (but high-risk) group in a single AZ
+  **Pros:** Great netword (10 Gbps bandwidth between instances)
+  **Cons:** If the rack fails, all instances fail at the same time
+
+- **Spread** - spreads instances across different hardware (max 7 instances per group per AZ) - for critical applications
+
+- **Partition** - spreads instances across many different partitions (which rely on different sets of racks) within an AZ.
+  Scales to 100s of EC2 instances per group (Hadoop, Cassandra, Kafka)
