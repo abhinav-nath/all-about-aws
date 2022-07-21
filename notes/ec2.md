@@ -161,11 +161,30 @@ These are the various strategies for a placement group:
 - **Cluster** - clusters instances into a low-latency (but high-risk) group in a single AZ
   <img width="50%" src="https://user-images.githubusercontent.com/48696735/180252321-ff5274f9-a1d7-4c96-bca7-a321e13f1aae.png">
 
-  **Pros:** Great network (10 Gbps bandwidth between instances)
-  **Cons:** If the rack fails, all instances fail at the same time
+  **Pros:**
+  - Great network (10 Gbps bandwidth between instances)
+  
+  **Cons:**
+  - If the rack fails, all instances fail at the same time
+  
+  **Use cases:**
+  - Big Data job that needs to complete fast
+  - Application that needs extremely low latency and high network throughput
 
 - **Spread** - spreads instances across different hardware (max 7 instances per group per AZ) - for critical applications
   <img width="60%" src="https://user-images.githubusercontent.com/48696735/180262803-8b6c96c7-bf13-4585-8c32-459fcfc6c04c.png">
+
+  **Pros:**
+  - Can span across AZs
+  - Reduced risk of simultaneous failure
+  - EC2 instances are on different physical hardware
+  
+  **Cons:**
+  - Limited to 7 intances per AZ per placement group
+  
+  **Use cases:**
+  - Application that needs to maximize high availability
+  - Critical applications where each instance must be isolated from failure
 
 - **Partition** - spreads instances across many different partitions (which rely on different sets of racks) within an AZ.
   Scales to 100s of EC2 instances per group (Hadoop, Cassandra, Kafka)
