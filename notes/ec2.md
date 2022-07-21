@@ -5,6 +5,7 @@
 - [EC2 User Data Script](#ec2-user-data-script "EC2 User Data Script")
 - [EC2 Instance Types](#ec2-instance-types "EC2 Instance Types")
 - [EC2 Security Groups](#ec2-security-groups "EC2 Security Groups")
+- [Classic Ports](#classic-ports "Classic Ports")
 
 ## Overview
 
@@ -69,3 +70,25 @@ There are many instance types, below are just few examples:
   - Control of outbound network (from instance to the outside)
   <img width="1768" alt="image" src="https://user-images.githubusercontent.com/48696735/180202139-586fe3ad-8845-46d8-8eaa-473c977df689.png">
 
+  - Security groups can be attached to multiple instances
+  - They are locked down to a region/VPC combination
+  - SGs live "outside" the EC2 - if traffic is blocked the EC2 instance won't see it
+  - *It is good to maintain one separate SG for SSH access*
+  - If your application is not accessible (time out), then it is probably a SG issue
+  - If your application gives a "connection refused" error, then it is an application error or it is not launched
+
+  - All **inboud** traffic is blocked ❌ by default
+  - All **outbound** traffic is allowed ✅ by default
+  
+  ### Referencing other Security Groups
+  
+  <img width="80%" alt="image" src="https://user-images.githubusercontent.com/48696735/180203602-2da6b756-b84a-4766-82d6-bc7670bc3ba1.png">
+  
+  ## Classic Ports
+  
+  - **22**   : SSH (Secure Shell) - log into a Linux instance
+  - **21**   : FTP (File Transfer Protocol) - upload files into a file share
+  - **22**   : SFTP (Secure FTP) - upload files using SSH
+  - **80**   : HTTP - access unsecured websites
+  - **443**  : HTTPS - access secured websites
+  - **3389** : RDP (Remote Desktop Protocol) - log into a Windows instance
