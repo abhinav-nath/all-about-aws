@@ -6,6 +6,7 @@
 - [EC2 Instance Types](#ec2-instance-types "EC2 Instance Types")
 - [EC2 Security Groups](#ec2-security-groups "EC2 Security Groups")
 - [Classic Ports](#classic-ports "Classic Ports")
+- [How to SSH into EC2 instance](#how-to-ssh-into-ec2-instance "How to SSH into EC2 instance")
 
 ## Overview
 
@@ -91,3 +92,17 @@ There are many instance types, below are just few examples:
 - **80**   : HTTP - access unsecured websites
 - **443**  : HTTPS - access secured websites
 - **3389** : RDP (Remote Desktop Protocol) - log into a Windows instance
+
+## How to SSH into EC2 instance
+
+Use the `.cer` or `.pem` file that you downloaded while creating the EC2 instance
+
+```shell
+~ chmod 0400 EC2Tutorial.cer
+```
+
+Login using user `ec2-user` to the Public IPv4 address of EC2 instance
+
+```shell
+~ ssh -i EC2Tutorial.cer ec2-user@65.0.199.110
+```
