@@ -159,9 +159,9 @@ We don't get direct interaction with the hardware of AWS but we let AWS know how
 These are the various strategies for a placement group:
 
 - **Cluster** - clusters instances into a low-latency (but high-risk) group in a single AZ
-  <img width="80%" src="https://user-images.githubusercontent.com/48696735/180252321-ff5274f9-a1d7-4c96-bca7-a321e13f1aae.png">
+  <img width="50%" src="https://user-images.githubusercontent.com/48696735/180252321-ff5274f9-a1d7-4c96-bca7-a321e13f1aae.png">
 
-  **Pros:** Great netword (10 Gbps bandwidth between instances)
+  **Pros:** Great network (10 Gbps bandwidth between instances)
   **Cons:** If the rack fails, all instances fail at the same time
 
 - **Spread** - spreads instances across different hardware (max 7 instances per group per AZ) - for critical applications
