@@ -13,6 +13,7 @@
   - Spread
   - Partition
 - [Elastic Network Interfaces (ENI)](#elastic-network-interfaces-eni "Elastic Network Interfaces (ENI)")
+- [EC2 Hibernate](#ec2-hibernate "EC2 Hibernate")
 
 ## Overview
 
@@ -219,3 +220,7 @@ These are the various strategies for a placement group:
   - A description
 - You can create ENI independently and attach them on the fly on EC2 instances for failover
 - Bound to a specific AZ
+
+## EC2 Hibernate
+
+TODO
