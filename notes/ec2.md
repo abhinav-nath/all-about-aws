@@ -144,7 +144,7 @@ IPv4 allows for **3.7 billion** different addresses in the public space
   - You can attach it to one instance at a time
   - With an Elastic IP address, you can mask the failure of an instance or software by quickly remapping the address to another instance in your account
   - You can only have 5 Elastic IPs in your account (you can ask AWS to increase that)
-  - Try to avoid using Elastic IPs:
+  - Try to avoid using Elastic IPs ❌
     - They often reflect poor architectural decisions
     - Instead, use a random public IP and register a **DNS** name to it
     - Or, use a **Load Balancer** and don't use a public IP
