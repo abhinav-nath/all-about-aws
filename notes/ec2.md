@@ -57,7 +57,7 @@ There are many instance types, below are just few examples:
 - Security Groups are the fundamental of **network security** in AWS
 - They control how traffic is allowed into or out our EC2 instances
 
-<img width="50%" alt="image" src="https://user-images.githubusercontent.com/48696735/180201245-dcc319ab-5657-4add-82a8-5452775f2200.png">
+  <img width="50%" alt="image" src="https://user-images.githubusercontent.com/48696735/180201245-dcc319ab-5657-4add-82a8-5452775f2200.png">
 
 - Security groups only contain *allow* rules
 - Security group can have rules that can be referenced by IP or by other security group
@@ -68,27 +68,26 @@ There are many instance types, below are just few examples:
   - Authorised IP ranges - IPv4 and IPv6
   - Control of inbound network (from outside to the instance)
   - Control of outbound network (from instance to the outside)
-  <img width="1768" alt="image" src="https://user-images.githubusercontent.com/48696735/180202139-586fe3ad-8845-46d8-8eaa-473c977df689.png">
+    <img width="1768" alt="image" src="https://user-images.githubusercontent.com/48696735/180202139-586fe3ad-8845-46d8-8eaa-473c977df689.png">
 
-  - Security groups can be attached to multiple instances
-  - They are locked down to a region/VPC combination
-  - SGs live "outside" the EC2 - if traffic is blocked the EC2 instance won't see it
-  - *It is good to maintain one separate SG for SSH access*
-  - If your application is not accessible (time out), then it is probably a SG issue
-  - If your application gives a "connection refused" error, then it is an application error or it is not launched
+- Security groups can be attached to multiple instances
+- They are locked down to a region/VPC combination
+- SGs live "outside" the EC2 - if traffic is blocked the EC2 instance won't see it
+- *It is good to maintain one separate SG for SSH access*
+- If your application is not accessible (**time out**), then it is probably a SG issue
+- If your application gives a "**connection refused**" error, then it is an application error or it is not launched
+- All **inboud** traffic is blocked ❌ by default
+- All **outbound** traffic is allowed ✅ by default
 
-  - All **inboud** traffic is blocked ❌ by default
-  - All **outbound** traffic is allowed ✅ by default
+### Referencing other Security Groups
   
-  ### Referencing other Security Groups
+<img width="80%" alt="image" src="https://user-images.githubusercontent.com/48696735/180203602-2da6b756-b84a-4766-82d6-bc7670bc3ba1.png">
   
-  <img width="80%" alt="image" src="https://user-images.githubusercontent.com/48696735/180203602-2da6b756-b84a-4766-82d6-bc7670bc3ba1.png">
+## Classic Ports
   
-  ## Classic Ports
-  
-  - **22**   : SSH (Secure Shell) - log into a Linux instance
-  - **21**   : FTP (File Transfer Protocol) - upload files into a file share
-  - **22**   : SFTP (Secure FTP) - upload files using SSH
-  - **80**   : HTTP - access unsecured websites
-  - **443**  : HTTPS - access secured websites
-  - **3389** : RDP (Remote Desktop Protocol) - log into a Windows instance
+- **22**   : SSH (Secure Shell) - log into a Linux instance
+- **21**   : FTP (File Transfer Protocol) - upload files into a file share
+- **22**   : SFTP (Secure FTP) - upload files using SSH
+- **80**   : HTTP - access unsecured websites
+- **443**  : HTTPS - access secured websites
+- **3389** : RDP (Remote Desktop Protocol) - log into a Windows instance
