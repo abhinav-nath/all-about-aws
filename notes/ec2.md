@@ -186,7 +186,7 @@ These are the various strategies for a placement group:
   - Application that needs to maximize high availability
   - Critical applications where each instance must be isolated from failure
 
-- **Partition**
+- **Partition** - similar to **spread** but it spreads instances across different partitions
 
   <img width="45%" src="https://user-images.githubusercontent.com/48696735/180267029-165d992e-f5b4-47e0-91e4-d59d119529a5.png">
 
