@@ -9,6 +9,9 @@
 - [How to SSH into EC2 instance](#how-to-ssh-into-ec2-instance "How to SSH into EC2 instance")
 - [Private vs Public vs Elastic IP](#private-vs-public-vs-elastic-ip "Private vs Public vs Elastic IP")
 - [EC2 Placement Groups](#ec2-placement-groups "EC2 Placement Groups")
+  - Cluster
+  - Spread
+  - Partition
 
 ## Overview
 
