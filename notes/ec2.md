@@ -188,3 +188,4 @@ These are the various strategies for a placement group:
 
 - **Partition** - spreads instances across many different partitions (which rely on different sets of racks) within an AZ.
   Scales to 100s of EC2 instances per group (Hadoop, Cassandra, Kafka)
+  ![image](https://user-images.githubusercontent.com/48696735/180267029-165d992e-f5b4-47e0-91e4-d59d119529a5.png)
