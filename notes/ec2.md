@@ -14,6 +14,9 @@
   - Partition
 - [Elastic Network Interfaces (ENI)](#elastic-network-interfaces-eni "Elastic Network Interfaces (ENI)")
 - [EC2 Hibernate](#ec2-hibernate "EC2 Hibernate")
+- [EC2 Nitro](#ec2-nitro "EC2 Nitro")
+- [Understanding vCPU](#understanding-vcpu "Understanding vCPU")
+- [Capacity Reservations](#capacity-reservations "Capacity Reservations")
 
 ## Overview
 
@@ -222,5 +225,17 @@ These are the various strategies for a placement group:
 - Bound to a specific AZ
 
 ## EC2 Hibernate
+
+TODO
+
+## EC2 Nitro
+
+TODO
+
+## Understanding vCPU
+
+TODO
+
+## Capacity Reservations
 
 TODO
