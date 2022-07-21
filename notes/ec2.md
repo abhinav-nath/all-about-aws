@@ -4,6 +4,7 @@
 - [EC2 sizing & configuration options](#ec2-sizing--configuration-options "EC2 sizing & configuration options")
 - [EC2 User Data Script](#ec2-user-data-script "EC2 User Data Script")
 - [EC2 Instance Types](#ec2-instance-types "EC2 Instance Types")
+- [EC2 Security Groups](#ec2-security-groups "EC2 Security Groups")
 
 ## Overview
 
@@ -49,3 +50,22 @@ There are many instance types, below are just few examples:
 - **m**: instance class
 - **5**: generation (AWS improves them over time)
 - **2xlarge**: size within the instance class
+
+## EC2 Security Groups
+
+- Security Groups are the fundamental of **network security** in AWS
+- They control how traffic is allowed into or out our EC2 instances
+
+<img width="50%" alt="image" src="https://user-images.githubusercontent.com/48696735/180201245-dcc319ab-5657-4add-82a8-5452775f2200.png">
+
+- Security groups only contain *allow* rules
+- Security group can have rules that can be referenced by IP or by other security group
+
+- Security groups act as a **"firewall"** on EC2 instances
+- They regulate:
+  - Access to Ports
+  - Authorised IP ranges - IPv4 and IPv6
+  - Control of inbound network (from outside to the instance)
+  - Control of outbound network (from instance to the outside)
+  <img width="1768" alt="image" src="https://user-images.githubusercontent.com/48696735/180202139-586fe3ad-8845-46d8-8eaa-473c977df689.png">
+
