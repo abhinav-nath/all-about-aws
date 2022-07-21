@@ -95,10 +95,12 @@ There are many instance types, below are just few examples:
 
 ## How to SSH into EC2 instance
 
-Use the `.cer` or `.pem` file that you downloaded while creating the EC2 instance
+Locate your private key file (`.cer` or `.pem` file that you got while creating the EC2 instance)
+
+Run below command to ensure your key is not publicly viewable:
 
 ```shell
-~ chmod 0400 EC2Tutorial.cer
+~ chmod 400 EC2Tutorial.cer
 ```
 
 Login using user `ec2-user` to the Public IPv4 address of EC2 instance
@@ -106,3 +108,6 @@ Login using user `ec2-user` to the Public IPv4 address of EC2 instance
 ```shell
 ~ ssh -i EC2Tutorial.cer ec2-user@65.0.199.110
 ```
+
+- We can also use **EC2 Instance Connect** to connect to our EC2 instance from browser only
+- It does use SSH behind the scenes
