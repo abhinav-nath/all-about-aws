@@ -159,7 +159,7 @@ We don't get direct interaction with the hardware of AWS but we let AWS know how
 These are the various strategies for a placement group:
 
 - **Cluster** - clusters instances into a low-latency (but high-risk) group in a single AZ
-  <img width="50%" src="https://user-images.githubusercontent.com/48696735/180252321-ff5274f9-a1d7-4c96-bca7-a321e13f1aae.png">
+  <img width="45%" src="https://user-images.githubusercontent.com/48696735/180252321-ff5274f9-a1d7-4c96-bca7-a321e13f1aae.png">
 
   **Pros:**
   - Great network (10 Gbps bandwidth between instances)
@@ -188,7 +188,7 @@ These are the various strategies for a placement group:
 
 - **Partition**
 
-  <img width="50%" src="https://user-images.githubusercontent.com/48696735/180267029-165d992e-f5b4-47e0-91e4-d59d119529a5.png">
+  <img width="45%" src="https://user-images.githubusercontent.com/48696735/180267029-165d992e-f5b4-47e0-91e4-d59d119529a5.png">
 
   - Up to 7 partitions per AZ
   - Can span across multiple AZs in the same region
