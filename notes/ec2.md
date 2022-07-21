@@ -7,6 +7,7 @@
 - [EC2 Security Groups](#ec2-security-groups "EC2 Security Groups")
 - [Classic Ports](#classic-ports "Classic Ports")
 - [How to SSH into EC2 instance](#how-to-ssh-into-ec2-instance "How to SSH into EC2 instance")
+- [Private vs Public vs Elastic IP](#private-vs-public-vs-elastic-ip "Private vs Public vs Elastic IP")
 
 ## Overview
 
@@ -111,3 +112,39 @@ Login using user `ec2-user` to the Public IPv4 address of EC2 instance
 
 - We can also use **EC2 Instance Connect** to connect to our EC2 instance from browser only
 - It does use SSH behind the scenes
+
+## Private vs Public vs Elastic IP
+
+Networking has two types of IPs : **IPv4** and **IPv6**
+
+IPv4 is still the most common format used online
+IPv6 is newer and is used in IoT (Internet of Things)
+
+IPv4 allows for **3.7 billion** different addresses in the public space
+`[0-255].[0-255].[0-255].[0-255]`
+
+<img width="80%" alt="image" src="https://user-images.githubusercontent.com/48696735/180228200-6338ee56-5bc9-4509-a6d7-cfcb5ee821cf.png">
+
+- **Public IP:**
+  - The machine can be identified on the Internet
+  - Must be unique across the whole web (two machines cannot have the same public IP)
+  - Can be geo-located easily
+
+- **Private IP:**
+  - The machine can only be identified on a private network
+  - The IP must be unique across the private network
+  - But two different private networks (two companies) can have the same IPs
+  - Machines connect to WWW using an Internet Gateway (a proxy)
+  - Only a specified range of IPs can be used as private IP
+
+- **Elastic IP:**
+  - When you stop and then start an EC2 instance, it can change its public IP
+  - If you need to have a fixed public IP for your instance, you need an **Elastic IP**
+  - An Elastic IP is a public IPv4 IP you own as long as you don't delete it
+  - You can attach it to one instance at a time
+  - With an Elastic IP address, you can mask the failure of an instance or software by quickly remapping the address to another instance in your account
+  - You can only have 5 Elastic IPs in your account (you can ask AWS to increase that)
+  - Try to avoid using Elastic IPs:
+    - They often reflect poor architectural decisions
+    - Instead, use a random public IP and register a **DNS** name to it
+    - Or, use a **Load Balancer** and don't use a public IP
