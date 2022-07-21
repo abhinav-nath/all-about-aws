@@ -165,6 +165,7 @@ These are the various strategies for a placement group:
   **Cons:** If the rack fails, all instances fail at the same time
 
 - **Spread** - spreads instances across different hardware (max 7 instances per group per AZ) - for critical applications
+  <img width="60%" src="https://user-images.githubusercontent.com/48696735/180262803-8b6c96c7-bf13-4585-8c32-459fcfc6c04c.png">
 
 - **Partition** - spreads instances across many different partitions (which rely on different sets of racks) within an AZ.
   Scales to 100s of EC2 instances per group (Hadoop, Cassandra, Kafka)
