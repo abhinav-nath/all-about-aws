@@ -46,14 +46,14 @@
 
 #### EBS Snapshot Archive
 
-<img width="300" src="https://user-images.githubusercontent.com/48696735/180499299-31f3a8f6-0233-4ae2-b175-ba39fd46889f.png">
+<img width="280" src="https://user-images.githubusercontent.com/48696735/180499299-31f3a8f6-0233-4ae2-b175-ba39fd46889f.png">
 
 - Move a Snapshot to an *archive tier* that is **75% cheaper**
 - Takes within 24 to 72 hours for restoring the archive
 
 #### Recycle Bin for EBS Snapshots
 
-<img width="300" src="https://user-images.githubusercontent.com/48696735/180499631-6f3eeb3e-e7cb-4dd0-a27d-a57e97682472.png">
+<img width="280" src="https://user-images.githubusercontent.com/48696735/180499631-6f3eeb3e-e7cb-4dd0-a27d-a57e97682472.png">
 
 - Setup rules to retain deleted snapshots so that you can recover them after an accidental deletion
 - Specify retention (from 1 day to 1 year)
