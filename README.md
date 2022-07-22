@@ -2,7 +2,7 @@
 
 - [Regions and Availability Zones](#regions-and-availability-zones "Regions and Availability Zones")
   - [How to choose an AWS region?](#how-to-choose-an-aws-region "How to choose an AWS region?")
-  - [Availability Zones - AZs)](#availability-zones-azs "Availability Zones - AZs")
+  - [Availability Zones - AZs](#availability-zones-azs "Availability Zones - AZs")
 - [IAM - Identity and Access Management](./notes/iam.md "IAM - Identity and Access Management")
 - [AMI - Amazon Machine Image](./notes/ami.md "AMI - Amazon Machine Image")
 - [EC2 - Elastic Compute Cloud](./notes/ec2.md "EC2 - Elastic Compute Cloud")
