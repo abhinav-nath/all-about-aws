@@ -5,6 +5,7 @@
   - [Availability Zones (AZs)](#availability-zones-azs "Availability Zones (AZs)")
 - [IAM](./notes/iam.md "IAM - Identity and Access Management")
 - [EC2](./notes/ec2.md "EC2 - Elastic Compute Cloud")
+  - [EC2 Storage Options](./notes/ec2-storage-options.md "EC2 Storage Options")
 
 ## AWS Budget Setup for Free Tier - Important!!
 
