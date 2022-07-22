@@ -3,6 +3,8 @@
 - [Amazon Elastic Block Store](#amazon-elastic-block-store "Amazon Elastic Block Store")
   - [Delete on Termination attribute](#delete-on-termination-attribute "Delete on Termination attribute")
   - [EBS Snapshots](#ebs-snapshots "EBS Snapshots")
+    - [EBS Snapshot Archive](#ebs-snapshot-archive "EBS Snapshot Archive")
+    - [Recycle Bin for EBS Snapshots](#recycle-bin-for-ebs-snapshots "Recycle Bin for EBS Snapshots")
 - [Amazon EC2 instance store](#amazon-ec2-instance-store "Amazon EC2 instance store")
 - [Use Amazon EFS with Amazon EC2](#use-amazon-efs-with-amazon-ec2 "Use Amazon EFS with Amazon EC2")
 - [Use Amazon S3 with Amazon EC2](#use-amazon-s3-with-amazon-ec2 "Use Amazon S3 with Amazon EC2")
@@ -41,14 +43,20 @@
 - Why snapshots?
   - We can copy snapshots across AZ or Region
 - [How to take a Snapshot](https://aws.plainenglish.io/aws-article-9-ebs-snapshots-663cee351441 "How to take a Snapshot")
-- **EBS Snapshot Archive**
-  - <img width="300" src="https://user-images.githubusercontent.com/48696735/180499299-31f3a8f6-0233-4ae2-b175-ba39fd46889f.png">
-  - Move a Snapshot to an *archive tier* that is **75% cheaper**
-  - Takes within 24 to 72 hours for restoring the archive
-- **Recycle Bin for EBS Snapshots**
-  - <img width="300" src="https://user-images.githubusercontent.com/48696735/180499631-6f3eeb3e-e7cb-4dd0-a27d-a57e97682472.png">
-  - Setup rules to retain deleted snapshots so that you can recover them after an accidental deletion
-  - Specify retention (from 1 day to 1 year)
+
+#### EBS Snapshot Archive
+
+<img width="300" src="https://user-images.githubusercontent.com/48696735/180499299-31f3a8f6-0233-4ae2-b175-ba39fd46889f.png">
+
+- Move a Snapshot to an *archive tier* that is **75% cheaper**
+- Takes within 24 to 72 hours for restoring the archive
+
+#### Recycle Bin for EBS Snapshots
+
+<img width="300" src="https://user-images.githubusercontent.com/48696735/180499631-6f3eeb3e-e7cb-4dd0-a27d-a57e97682472.png">
+
+- Setup rules to retain deleted snapshots so that you can recover them after an accidental deletion
+- Specify retention (from 1 day to 1 year)
 
 ## Amazon EC2 instance store
 
