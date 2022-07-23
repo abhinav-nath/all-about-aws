@@ -1,6 +1,6 @@
 # EC2 Storage Options
 
-- [Amazon Elastic Block Store](#amazon-elastic-block-store "Amazon Elastic Block Store")
+- [Amazon Elastic Block Store (EBS)](#amazon-elastic-block-store-ebs "Amazon Elastic Block Store (EBS)")
   - [EBS Volume Types](#ebs-volume-types "EBS Volume Types")
   - [EBS Multi-Attach](#ebs-multi-attach "EBS Multi-Attach")
   - [Delete on Termination attribute](#delete-on-termination-attribute "Delete on Termination attribute")
@@ -8,13 +8,13 @@
     - [EBS Snapshot Archive](#ebs-snapshot-archive "EBS Snapshot Archive")
     - [Recycle Bin for EBS Snapshots](#recycle-bin-for-ebs-snapshots "Recycle Bin for EBS Snapshots")
   - [EBS Encryption](#ebs-encryption "EBS Encryption")
-- [Amazon EC2 Instance Store](#amazon-ec2-instance-store- "Amazon EC2 Instance Store")
-- [Use Amazon EFS with Amazon EC2](#use-amazon-efs-with-amazon-ec2 "Use Amazon EFS with Amazon EC2")
+- [Amazon EC2 Instance Store](#amazon-ec2-instance-store "Amazon EC2 Instance Store")
+- [Amazon Elastic File System (EFS)](#amazon-elastic-file-system-efs "Amazon Elastic File System (EFS)")
 - [Use Amazon S3 with Amazon EC2](#use-amazon-s3-with-amazon-ec2 "Use Amazon S3 with Amazon EC2")
 
 ![image](https://user-images.githubusercontent.com/48696735/180452409-11680f62-b786-4266-8b38-c328303d0f7c.png)
 
-## Amazon Elastic Block Store (EBS) <img align="right" width="8%" src="https://user-images.githubusercontent.com/48696735/180450459-120c4a57-f206-4ad1-bed9-450fc68168a0.png">
+## Amazon Elastic Block Store (EBS)<img align="right" width="8%" src="https://user-images.githubusercontent.com/48696735/180450459-120c4a57-f206-4ad1-bed9-450fc68168a0.png">
 
 - An **EBS (Elastic Block Store) Volume** is a **network drive** you can attach to you instances while they run
   - **Con:** It uses the network to communicate with the instance, so there might be a bit of latency
@@ -121,7 +121,7 @@
 - Create new EBS volume from the encrypted snapshot (the new volume will also be encrypted)
 - Now you can attach the encrypted volume to the original EC2 instance
 
-## Amazon EC2 Instance Store <img align="right" width="100" src="https://user-images.githubusercontent.com/48696735/180611522-8dca9ee7-3a27-4fab-ae2b-bb3997254ca8.png">
+## Amazon EC2 Instance Store<img align="right" width="100" src="https://user-images.githubusercontent.com/48696735/180611522-8dca9ee7-3a27-4fab-ae2b-bb3997254ca8.png">
 
 - [Documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html "EC2 Instance Store Documentation")
 - EBS volumes are **network drives** with good but "limited" performance
@@ -150,7 +150,7 @@ Instance store is ideal for temporary storage of information that changes freque
   
 or for data that is replicated across a fleet of instances, such as a load-balanced pool of web servers
 
-## Use Amazon EFS with Amazon EC2
+## Amazon Elastic File System (EFS)
 
 ## Use Amazon S3 with Amazon EC2
 
