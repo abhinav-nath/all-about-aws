@@ -29,3 +29,4 @@ You can launch EC2 instances from:
 - Stop the instance (for data integrity)
 - Build an AMI - this will also create EBS Snapshots
 - Launch instances from other AMIs
+- [Reference](https://docs.aws.amazon.com/toolkit-for-visual-studio/latest/user-guide/tkv-create-ami-from-instance.html)
