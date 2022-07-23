@@ -60,7 +60,7 @@
 ### EBS Multi-Attach
 
 - Only supported by Provisioned IOPS SSD family (io1 and io2)
-- Attach the same EBS volume to multiple EC2 instances in the same AZ
+- Attach the same EBS volume to multiple EC2 instances in the **same AZ** 📌
 - Each instance has full read & write permissions to the volume
 - Use cases:
   - Achieve **higher application availability** in clustered Linux applications (like Teradata)
