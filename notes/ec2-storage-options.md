@@ -198,6 +198,8 @@ Amazon EFS supports the Network File System version 4 (NFSv4.1 and NFSv4.0) prot
   - **Standard:** Multi-AZ, great for prod
   - **One Zone:** One AZ, great for dev, backup enabled by default, compatible with IA (**EFS One Zone-IA**)
 
+*We can leverage EFS-IA for great cost savings*
+
 <img width="300" src="https://user-images.githubusercontent.com/48696735/180619111-ff83e95b-80a6-4348-a251-5e5f65f97850.png">
 
 ## Use Amazon S3 with Amazon EC2
