@@ -61,7 +61,9 @@
 - Must use a file system that's cluster-aware (not XFS, EX4, etc)
 
 ### Delete on Termination attribute
+
 <img src="https://user-images.githubusercontent.com/48696735/180496768-9cbe5c0a-f53f-478e-960c-8b3cc286ad4c.png">
+
 - Can be configured for root volume while creating the EC2 instance
 - Controls the EBS behavior when an EC2 instance terminates
 - By default, the **root** EBS volume is deleted (attribute enabled)
