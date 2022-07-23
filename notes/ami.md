@@ -6,7 +6,7 @@ AMI is a customization of an EC2 instance
 - You add your own software, configuration, OS, monitoring etc
 - Faster boot / configuration time because all your software is pre-packaged
 
-AMIs are built for a **specific region** (and can be copied across regions)
+📌 AMIs are built for a **specific region** (and can be copied across regions)
 
 You can launch EC2 instances from:
 - **A public AMI**: AWS provided, Ex - Amazon Linux
