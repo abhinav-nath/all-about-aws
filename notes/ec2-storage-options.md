@@ -1,6 +1,7 @@
 # EC2 Storage Options
 
 - [Amazon Elastic Block Store](#amazon-elastic-block-store "Amazon Elastic Block Store")
+  - [EBS Volume Types](#ebs-volume-types "EBS Volume Types")
   - [Delete on Termination attribute](#delete-on-termination-attribute "Delete on Termination attribute")
   - [EBS Snapshots](#ebs-snapshots "EBS Snapshots")
     - [EBS Snapshot Archive](#ebs-snapshot-archive "EBS Snapshot Archive")
@@ -39,7 +40,7 @@
       1. io1
       2. io2
 2. **Hard disk drives (HDD)**
-   1 **Throughput Optimized HDD**
+   1. **Throughput Optimized HDD**
       - st1
    2. **Cold HDD**
       - sc1
