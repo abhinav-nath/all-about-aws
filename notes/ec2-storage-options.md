@@ -53,6 +53,8 @@
 3. **Previous generation volume types**
    - Magnetic
 
+📌 When creating EC2 instances, you can only use the following EBS volume types as boot volumes: gp2, gp3, io1, io2, and Magnetic (Standard).
+
 ---
 
 ### EBS Multi-Attach
