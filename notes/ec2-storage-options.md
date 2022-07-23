@@ -8,7 +8,7 @@
     - [EBS Snapshot Archive](#ebs-snapshot-archive "EBS Snapshot Archive")
     - [Recycle Bin for EBS Snapshots](#recycle-bin-for-ebs-snapshots "Recycle Bin for EBS Snapshots")
   - [EBS Encryption](#ebs-encryption "EBS Encryption")
-- [Amazon EC2 Instance Store](#amazon-ec2-instance-store "Amazon EC2 Instance Store")
+- [Amazon EC2 Instance Store](#amazon-ec2-instance-store- "Amazon EC2 Instance Store")
 - [Use Amazon EFS with Amazon EC2](#use-amazon-efs-with-amazon-ec2 "Use Amazon EFS with Amazon EC2")
 - [Use Amazon S3 with Amazon EC2](#use-amazon-s3-with-amazon-ec2 "Use Amazon S3 with Amazon EC2")
 
