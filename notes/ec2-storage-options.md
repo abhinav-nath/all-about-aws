@@ -2,6 +2,7 @@
 
 - [Amazon Elastic Block Store](#amazon-elastic-block-store "Amazon Elastic Block Store")
   - [EBS Volume Types](#ebs-volume-types "EBS Volume Types")
+  - [EBS Multi-Attach](#ebs-multi-attach "EBS Multi-Attach")
   - [Delete on Termination attribute](#delete-on-termination-attribute "Delete on Termination attribute")
   - [EBS Snapshots](#ebs-snapshots "EBS Snapshots")
     - [EBS Snapshot Archive](#ebs-snapshot-archive "EBS Snapshot Archive")
@@ -39,6 +40,8 @@
    2. **Provisioned IOPS SSD** - Provides high performance for mission-critical, low-latency, or high-throughput workloads
       1. io1
       2. io2
+      
+      *[EBS Multi-Attach](#ebs-multi-attach "EBS Multi-Attach") is supported in this type*
 2. **Hard disk drives (HDD)**
    1. **Throughput Optimized HDD**
       - st1
@@ -46,6 +49,16 @@
       - sc1
 3. **Previous generation volume types**
    - Magnetic
+
+### EBS Multi-Attach
+
+- Only supported by Provisioned IOPS SSD family (io1 and io2)
+- Attach the same EBS volume to multiple EC2 instances in the same AZ
+- Each instance has full read & write permissions to the volume
+- Use cases:
+  - Achieve **higher application availability** in clustered Linux applications (like Teradata)
+  - Where applications must be able to manage concurrent write operations
+- Must use a file system that's cluster-aware (not XFS, EX4, etc)
 
 ### Delete on Termination attribute
 <img src="https://user-images.githubusercontent.com/48696735/180496768-9cbe5c0a-f53f-478e-960c-8b3cc286ad4c.png">
