@@ -150,7 +150,7 @@ Instance store is ideal for temporary storage of information that changes freque
   
 or for data that is replicated across a fleet of instances, such as a load-balanced pool of web servers
 
-## Amazon Elastic File System (EFS)
+## Amazon Elastic File System (EFS)<img align="right" width="80" src="https://user-images.githubusercontent.com/48696735/180619398-b13a1ab1-e26b-49a6-ae6d-083cfc37e980.png">
 
 [Documentation](https://docs.aws.amazon.com/efs/latest/ug/whatisefs.html "EFS Documentation")
 
@@ -194,9 +194,9 @@ Amazon EFS supports the Network File System version 4 (NFSv4.1 and NFSv4.0) prot
   - **Standard:** for frequently accessed files
   - **Infrequent Access (EFS-IA):** cost to retrieve files, lower price to store. Enable EFS-IA with a Lifecycle Policy.
 
-**Availability and Durability**
-- **Standard:** Multi-AZ, great for prod
-- **One Zone:** One AZ, great for dev, backup enabled by default, compatible with IA (**EFS One Zone-IA**)
+- **Availability and Durability**
+  - **Standard:** Multi-AZ, great for prod
+  - **One Zone:** One AZ, great for dev, backup enabled by default, compatible with IA (**EFS One Zone-IA**)
 
 <img width="300" src="https://user-images.githubusercontent.com/48696735/180619111-ff83e95b-80a6-4348-a251-5e5f65f97850.png">
 
