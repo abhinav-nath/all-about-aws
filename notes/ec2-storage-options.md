@@ -12,7 +12,7 @@
 - [Amazon Elastic File System (EFS)](#amazon-elastic-file-system-efs "Amazon Elastic File System (EFS)")
 - [Use Amazon S3 with Amazon EC2](#use-amazon-s3-with-amazon-ec2 "Use Amazon S3 with Amazon EC2")
 
-![image](https://user-images.githubusercontent.com/48696735/180452409-11680f62-b786-4266-8b38-c328303d0f7c.png)
+<img width="550" src="https://user-images.githubusercontent.com/48696735/180452409-11680f62-b786-4266-8b38-c328303d0f7c.png">
 
 ## Amazon Elastic Block Store (EBS)<img align="right" width="8%" src="https://user-images.githubusercontent.com/48696735/180450459-120c4a57-f206-4ad1-bed9-450fc68168a0.png">
 
@@ -152,6 +152,55 @@ or for data that is replicated across a fleet of instances, such as a load-balan
 
 ## Amazon Elastic File System (EFS)
 
+[Documentation](https://docs.aws.amazon.com/efs/latest/ug/whatisefs.html "EFS Documentation")
+
+Amazon EFS provides a simple, scalable, fully managed elastic NFS[^2] for use with AWS Cloud services and on-premises resources.
+
+Amazon EFS is designed to provide massively parallel shared access to thousands of Amazon EC2 instances, enabling your applications to achieve high levels of aggregate throughput and IOPS with consistent low latencies.
+
+Amazon EFS supports the Network File System version 4 (NFSv4.1 and NFSv4.0) protocol.
+
+- EFS works with EC2 instances in multi-AZ
+- Highly available, scalable, expensize (3 x gp2), pay per use
+- To control access to EFS, you need to setup a security group
+- Compatible with Linux based AMIs (not Windows)
+- Encryption at rest using KMS
+- File system scales automatically, pay-per-use, no capacity planning needed in advance
+- Use cases:
+  - Content management
+  - Web serving
+  - Data sharing
+  - Wordpress
+
+### EFS - Performance & Storage Classes
+
+**EFS Scale**
+- 1000s of concurrent NFS clients, 10 GB+ /s throughput
+- Grows to Petabyte scale NFS, automatically
+
+**Performance mode (set at EFS creation time)**
+- General purpose (default): latency-sensitive use cases (web server, CMS, etc)
+- Max I/O: higher latency, throughput, highly parallel (big data, media processing)
+
+**Throughput mode**
+- **Bursting** mode (default): 1 TB = 50 MiB/s + burst of up to 100 MiB/s
+- **Provisioned** mode: set your throughput regardless of storage size, ex: 1 GiB/s for 1 TB storage
+
+[Storage Classes](https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html "EFS Storage Classes")
+
+<img width="900" src="https://user-images.githubusercontent.com/48696735/180619164-4d3dd469-79dd-4bae-bf94-06cf0b7188f4.png">
+
+- **Storage Tiers** (lifecycle management feature - move file to a different tier after N days)
+  - **Standard:** for frequently accessed files
+  - **Infrequent Access (EFS-IA):** cost to retrieve files, lower price to store. Enable EFS-IA with a Lifecycle Policy.
+
+**Availability and Durability**
+- **Standard:** Multi-AZ, great for prod
+- **One Zone:** One AZ, great for dev, backup enabled by default, compatible with IA (**EFS One Zone-IA**)
+
+<img width="300" src="https://user-images.githubusercontent.com/48696735/180619111-ff83e95b-80a6-4348-a251-5e5f65f97850.png">
+
 ## Use Amazon S3 with Amazon EC2
 
-[^1]: temporary, lasting for a very short time
+[^1]: ephemeral - temporary, lasting for a very short time
+[^2]: NFS - Network File System
