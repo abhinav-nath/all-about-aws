@@ -7,6 +7,7 @@
   - [EBS Snapshots](#ebs-snapshots "EBS Snapshots")
     - [EBS Snapshot Archive](#ebs-snapshot-archive "EBS Snapshot Archive")
     - [Recycle Bin for EBS Snapshots](#recycle-bin-for-ebs-snapshots "Recycle Bin for EBS Snapshots")
+  - [EBS Encryption](#ebs-encryption "EBS Encryption")
 - [Amazon EC2 Instance Store](#amazon-ec2-instance-store "Amazon EC2 Instance Store")
 - [Use Amazon EFS with Amazon EC2](#use-amazon-efs-with-amazon-ec2 "Use Amazon EFS with Amazon EC2")
 - [Use Amazon S3 with Amazon EC2](#use-amazon-s3-with-amazon-ec2 "Use Amazon S3 with Amazon EC2")
@@ -29,6 +30,8 @@
 - To keep a backup copy of your data, you can create a snapshot of an EBS volume, which is stored in **Amazon S3**
 - **Free tier:** 30 GB per month of free EBS storage of type **General Purpose (SSD)** or **Magnetic**
 
+---
+
 ### EBS Volume Types
 
 [Documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volume-types.html "EBS Volume Types")
@@ -50,6 +53,8 @@
 3. **Previous generation volume types**
    - Magnetic
 
+---
+
 ### EBS Multi-Attach
 
 - Only supported by Provisioned IOPS SSD family (io1 and io2)
@@ -59,6 +64,8 @@
   - Achieve **higher application availability** in clustered Linux applications (like Teradata)
   - Where applications must be able to manage concurrent write operations
 - Must use a file system that's cluster-aware (not XFS, EX4, etc)
+
+---
 
 ### Delete on Termination attribute
 
@@ -92,6 +99,27 @@
 
 - Setup rules to retain deleted snapshots so that you can recover them after an accidental deletion
 - Specify retention (from 1 day to 1 year)
+
+---
+
+### EBS Encryption
+
+- When you create an encrypted EBS volume, you get the following:
+  - Data at rest is encrypted inside the volume
+  - All the in-flight data moving between the instance and the volume is encrypted
+  - All snapshots are encrypted
+  - All volumes created from the snapshot are encrypted
+- Encryption has a minimal impact on latency
+- EBS encryption leverages keys from KMS (AES-256)
+- Copying an unencrypted snapshot allows encryption
+- Snapshots of encrypted volumes are also encrypted
+
+#### Encrypt an unencrypted EBS volume
+
+- Create an EBS snapshot of the volume
+- Encrypt the snapshot (using copy)
+- Create new EBS volume from the encrypted snapshot (the new volume will also be encrypted)
+- Now you can attach the encrypted volume to the original EC2 instance
 
 ## Amazon EC2 Instance Store <img align="right" width="100" src="https://user-images.githubusercontent.com/48696735/180611522-8dca9ee7-3a27-4fab-ae2b-bb3997254ca8.png">
 
