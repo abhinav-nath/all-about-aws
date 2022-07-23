@@ -5,7 +5,7 @@
   - [EBS Snapshots](#ebs-snapshots "EBS Snapshots")
     - [EBS Snapshot Archive](#ebs-snapshot-archive "EBS Snapshot Archive")
     - [Recycle Bin for EBS Snapshots](#recycle-bin-for-ebs-snapshots "Recycle Bin for EBS Snapshots")
-- [Amazon EC2 instance store](#amazon-ec2-instance-store "Amazon EC2 instance store")
+- [Amazon EC2 Instance Store](#amazon-ec2-instance-store "Amazon EC2 Instance Store")
 - [Use Amazon EFS with Amazon EC2](#use-amazon-efs-with-amazon-ec2 "Use Amazon EFS with Amazon EC2")
 - [Use Amazon S3 with Amazon EC2](#use-amazon-s3-with-amazon-ec2 "Use Amazon S3 with Amazon EC2")
 
@@ -26,6 +26,25 @@
 - EBS volumes can also be created as encrypted volumes using the Amazon EBS encryption feature
 - To keep a backup copy of your data, you can create a snapshot of an EBS volume, which is stored in **Amazon S3**
 - **Free tier:** 30 GB per month of free EBS storage of type **General Purpose (SSD)** or **Magnetic**
+
+### EBS Volume Types
+
+[Documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volume-types.html "EBS Volume Types")
+
+1. **Solid State Drives (SSD)**
+   1. **General Purpose SSD** - Provides a balance of price and performance
+      1. gp2
+      2. gp3
+   2. **Provisioned IOPS SSD** - Provides high performance for mission-critical, low-latency, or high-throughput workloads
+      1. io1
+      2. io2
+2. **Hard disk drives (HDD)**
+   1 **Throughput Optimized HDD**
+      - st1
+   2. **Cold HDD**
+      - sc1
+3. **Previous generation volume types**
+   - Magnetic
 
 ### Delete on Termination attribute
 <img src="https://user-images.githubusercontent.com/48696735/180496768-9cbe5c0a-f53f-478e-960c-8b3cc286ad4c.png">
@@ -58,8 +77,37 @@
 - Setup rules to retain deleted snapshots so that you can recover them after an accidental deletion
 - Specify retention (from 1 day to 1 year)
 
-## Amazon EC2 instance store
+## Amazon EC2 Instance Store <img align="right" width="100" src="https://user-images.githubusercontent.com/48696735/180611522-8dca9ee7-3a27-4fab-ae2b-bb3997254ca8.png">
+
+- [Documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html "EC2 Instance Store Documentation")
+- EBS volumes are **network drives** with good but "limited" performance
+- If you need a high-performance **hardware disk**, use EC2 Instance Store
+
+**Main advantage:**
+- Better I/O performance
+
+**Caveat:**
+- The data in an instance store persists only during the lifetime of its associated instance (ephemeral[^1])
+- If an instance reboots (intentionally or unintentionally), data in the instance store **persists**
+- However, data in the instance store is lost under any of the following circumstances:
+  - The underlying disk drive fails
+  - The instance stops
+  - The instance hibernates
+  - The instance terminates
+- When you stop, hibernate, or terminate an instance, every block of storage in the instance store is reset
+
+Therefore, do not rely on instance store for valuable, long-term data. Instead, use more durable data storage, such as Amazon S3, Amazon EBS, or Amazon EFS.
+
+Instance store is ideal for temporary storage of information that changes frequently, such as
+- buffers
+- caches
+- scratch data, and
+- other temporary content
+  
+or for data that is replicated across a fleet of instances, such as a load-balanced pool of web servers
 
 ## Use Amazon EFS with Amazon EC2
 
 ## Use Amazon S3 with Amazon EC2
+
+[^1]: temporary, lasting for a very short time
