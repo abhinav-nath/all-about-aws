@@ -87,7 +87,7 @@ There are many instance types, below are just few examples:
 - *It is good to maintain one separate SG for SSH access*
 - If your application is not accessible (**time out**), then it is probably a SG issue
 - If your application gives a "**connection refused**" error, then it is an application error or it is not launched
-- All **inboud** traffic is blocked ❌ by default
+- All **inbound** traffic is blocked ❌ by default
 - All **outbound** traffic is allowed ✅ by default
 
 ### Referencing other Security Groups
