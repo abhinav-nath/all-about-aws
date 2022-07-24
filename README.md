@@ -7,6 +7,7 @@
 - [AMI - Amazon Machine Image](./notes/ami.md "AMI - Amazon Machine Image")
 - [EC2 - Elastic Compute Cloud](./notes/ec2.md "EC2 - Elastic Compute Cloud")
   - [EC2 Storage Options](./notes/ec2-storage-options.md "EC2 Storage Options")
+- [ELB - Elastic Load Balancing](./notes/elb.md "ELB - Elastic Load Balancing")
 
 ## AWS Budget Setup for Free Tier - Important!!
 
