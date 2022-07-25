@@ -3,7 +3,8 @@
 - [Why use a load balancer?](#why-use-a-load-balancer "Why use a load balancer?")
 - [Why use an Elastic Load Balancer?](#why-use-an-elastic-load-balancer "Why use an Elastic Load Balancer?")
 - [Health Checks](#health-checks "Health Checks")
-- [Types of load balancers on AWS](#types-of-load-balancers-on-aws "Types of load balancers on AWS")
+- [Types of Load Balancers on AWS](#types-of-load-balancers-on-aws "Types of Load Balancers on AWS")
+- [Load Balancer Security Groups](#load-balancer-security-groups "Load Balancer Security Groups")
 
 <img width="600" src="https://user-images.githubusercontent.com/48696735/180640721-0320b296-643c-413e-82bb-3d3a1d53fe13.png">
 
@@ -39,7 +40,7 @@
 - Health Check is done on a port and a route (`/health` is common)
 - If the response is not 200 (OK) then the instance is unhealthy
 
-## Types of load balancers on AWS
+## Types of Load Balancers on AWS
 
 AWS has 4 kinds of managed load balancers:
 
@@ -51,4 +52,7 @@ AWS has 4 kinds of managed load balancers:
    - supports TCP, TLS, UDP
 4. **Gateway Load Balancer (GWLB)** : 2020
    - operates at layer 3 (network layer) - IP protocol
-5. 
+
+## Load Balancer Security Groups
+
+TODO
