@@ -11,6 +11,7 @@ Most AWS services are **region-scoped**
 Advantages of Regions:
 - High Availability
 - Low Latency
+- Adhere to government regulations
 
 ## How to choose an AWS region?
 
@@ -21,7 +22,9 @@ Advantages of Regions:
 
 ## Availability Zones (AZs)
 
-An Availability Zone (AZ) is one or more discrete data centers with redundant power, networking, and connectivity in an AWS Region.
+AZs are **isolated locations** in a Region.
+
+> An Availability Zone (AZ) is one or more discrete data centers with redundant power, networking, and connectivity in an AWS Region.
 
 Each region has many availability zones (usually 3, min is 2, max is 6).
 Example:
@@ -45,6 +48,8 @@ AZs make partitioning applications for high availability easy.
 If an application is partitioned across AZs, companies are better isolated and protected from issues such as power outages, lightning strikes, tornadoes, earthquakes, and more.
 
 AZs are physically separated by a meaningful distance, many kilometers, from any other AZ, although all are within 100 km (60 miles) of each other.
+
+> The main use of AZs is to *increase availability* of applications in the same region.
 
 AWS has Global Services like these:
 - IAM
