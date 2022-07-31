@@ -21,10 +21,13 @@
 
 ## Why use an Elastic Load Balancer?
 
+- Distribute traffic across EC2 instances in one or more AZs in a single Region 📌
 - ELB is a managed load balancer
   - AWS guarantees that it will be working
   - AWS takes care of upgrades, maintenance, high availability
   - AWS provides only a few configuration options
+- Auto scales to handle huge loads
+- Load Balancers can be **public** or **private**
 - It costs less to setup your own load balancer but it will be a lot more effort on your end
 - It is integrated with many AWS offerings/services like
   - EC2, EC2 Auto Scaling Groups, Amazon ECS
@@ -34,6 +37,8 @@
 ## Health Checks
 
 <img width="500" src="https://user-images.githubusercontent.com/48696735/180645678-4467fe89-8974-428e-9cf6-ab22f05d9c59.png">
+
+Health checks enable to route traffic to only healthy instances.
 
 - Health checks are crucial for Load Balancers
 - They enable the load balancer to know if instances it forwards the traffic to are available to respond to requests
