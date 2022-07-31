@@ -8,6 +8,10 @@ Each group of logical data centers is called an **Availability Zone**
 
 Most AWS services are **region-scoped**
 
+Advantages of Regions:
+- High Availability
+- Low Latency
+
 ## How to choose an AWS region?
 
 - **Compliance** with data governance and legal requirements: _data never leaves a region without your explicit permission_
