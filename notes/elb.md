@@ -50,7 +50,8 @@ Health checks enable to route traffic to only healthy instances.
 AWS has 4 kinds of managed load balancers:
 
 1. **Classic Load Balancer (CLB)** : v1 - old generation - 2009
-   - supports HTTP, HTTPS, TCP, SSL
+   - supports **Layer 4** (TCP/TLS) and **Layer 7** (HTTP, HTTPS)
+   - not recommended by AWS
 2. **Application Load Balancer (ALB)** : v2 - new generation - 2016
    - supports HTTP, HTTPS, WebSocket
 3. **Network Load Balancer (NLB)** : v2 - new generation - 2017
