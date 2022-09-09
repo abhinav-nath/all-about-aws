@@ -51,9 +51,17 @@ AWS has 4 kinds of managed load balancers:
 
 1. **Classic Load Balancer (CLB)** : v1 - old generation - 2009
    - supports **Layer 4** protocols (TCP, TLS) and **Layer 7** protocols (HTTP, HTTPS)
-   - not recommended by AWS
+   - not recommended anymore by AWS
 2. **Application Load Balancer (ALB)** : v2 - new generation - 2016
+   - most popular and frequently used ELB in AWS
    - supports **Layer 7** protocols (HTTP, HTTPS, WebSocket)
+   - supports all important load balancer features
+   - scales automatically based on demand (auto-scaling)
+   - can load balance between:
+     - EC2 instances
+     - containerized applications (Amazon ECS)
+     - web applications (using IP addresses)
+     - Lambdas (serverless)
 3. **Network Load Balancer (NLB)** : v2 - new generation - 2017
    - supports **Layer 4** protocols (TCP, TLS and UDP)
    - recommended for very high performance use-cases
